@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Media } from 'reactstrap';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 
-class Menu extends Component {
+class Dishdetail extends Component {
   constructor(props) {
       super(props);
 
@@ -37,7 +37,7 @@ class Menu extends Component {
           return (
             <div  className="col-12 col-md-5 m-1">
               <Card key={dish.id}
-                        onClick={() => this.props.onClick(dish.id)}>
+                onClick={() => this.onDishSelect(dish)}>
                 <CardImg width="100%" src={dish.image} alt={dish.name} />
                 <CardImgOverlay>
                     <CardTitle>{dish.name}</CardTitle>
@@ -62,4 +62,4 @@ class Menu extends Component {
   }
 }
 
-export default Menu;
+export default Dishdetail;
